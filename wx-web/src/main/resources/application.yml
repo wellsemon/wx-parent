@@ -1,0 +1,12 @@
+server:
+    port: 80
+spring:
+  cache:
+    ehcache:
+      config: ehcache.xml
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    # 开发关闭缓存，以便实时查看页面
+    cache: false

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eh:config
+        xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+        xmlns:eh='http://www.ehcache.org/v3'
+        xsi:schemaLocation="
+        http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.3.xsd">
+    <eh:cache alias="accesstoken">
+        <eh:expiry>
+            <eh:tti unit="hours">2</eh:tti>
+        </eh:expiry>
+        <eh:heap-store-settings>
+            <eh:max-object-size>1</eh:max-object-size>
+        </eh:heap-store-settings>
+    </eh:cache>
+
+    <eh:cache alias="oauth2token">
+        <eh:expiry>
+            <eh:tti unit="seconds">7200</eh:tti>
+        </eh:expiry>
+        <eh:heap-store-settings>
+            <eh:max-object-size>1</eh:max-object-size>
+        </eh:heap-store-settings>
+    </eh:cache>
+</eh:config>
